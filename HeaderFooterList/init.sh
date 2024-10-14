@@ -8,4 +8,4 @@ fi
 
 cd /home/.evaluationScripts
 npm install
-npm start
+PORT=30000 npm start
