@@ -1,5 +1,5 @@
 {
-  "name": "e-commerce-lab",
+  "name": "headerfooterlist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test --silent > out.txt 2>&1",
+    "test": "cross-env CI=true react-scripts test --silent > .bodhiFiles/out.txt 2>&1",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

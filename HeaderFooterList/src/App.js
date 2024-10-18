@@ -8,12 +8,12 @@ import products from './productList';
 function App() {
   return (
     <div className="App">
-            <Header />
-              <main>
-                <ProductList products={products}/>
-              </main>
-            <Footer />
-        </div>
+      <Header />
+        <main>
+          <ProductList products={products}/>
+        </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductCard from './ProductCard';
 
 function ProductList({products}) {
     return (
@@ -6,13 +7,11 @@ function ProductList({products}) {
         // Should contain all the products
         <div data-testid="product-list">
             <h2>Product List</h2>
-            <ul>
+            <div className="product-container">
                 {products.map((product) => (
-                    <li key={product.id}>
-                        {product.name} - {product.price}
-                    </li>
+                    <ProductCard product={product}/>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

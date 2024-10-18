@@ -18,4 +18,4 @@ def show_test_suites(file_path):
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    show_test_suites('out.txt')
+    show_test_suites('/home/.evaluationScripts/.bodhiFiles/out.txt')
