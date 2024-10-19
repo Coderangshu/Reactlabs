@@ -4,7 +4,12 @@ import '../csses/ProductCard.css';
 const ProductCard = ({ product }) => {
   return (
     <div className="product-card" data-testid="product-card">
-      // Write your code here
+      <h2>{product.name}</h2>
+      <p>Price: {product.price}</p>
+      <div>
+        <button>+</button>
+        <button>-</button>
+      </div>
     </div>
   );
 };

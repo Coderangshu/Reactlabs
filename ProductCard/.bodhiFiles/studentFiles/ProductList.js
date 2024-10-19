@@ -1,11 +1,10 @@
 import React from 'react';
+// import neccessary components (if required)
 
 function ProductList({products}) {
     return (
-        // write your code inside the <div> </div>
-        // Should contain all the products
-        <div data-testid="product-list">
-            write your code
+        <div className="product-container" data-testid="product-list">
+            // write your code here, inside the surrounding <div> </div>
         </div>
     );
 }
