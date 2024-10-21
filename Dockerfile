@@ -1,5 +1,5 @@
 # Step 1: Use official Node.js image
-FROM node:22
+FROM node:22-alpine
 
 # Step 2: Set the working directory inside the container
 WORKDIR /home/labDirectory
@@ -9,6 +9,9 @@ RUN mkdir /home/.evaluationScripts
 
 # Step 4: Expose the port on which the React app will run
 EXPOSE 30000
+
+# Step 5: Add necessary binaries
+RUN apk update && apk add bash && apk add python3
 
 # Step 5: Start the React app
 CMD [ "/bin/bash", "-c", "bash /home/.evaluationScripts/.bodhiFiles/init.sh; while :; do sleep 10; done" ]
