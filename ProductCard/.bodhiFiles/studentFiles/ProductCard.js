@@ -5,7 +5,7 @@ import '../csses/ProductCard.css';
 const ProductCard = ({ product }) => {
   return (
     <div className="product-card" data-testid="product-card">
-      // write your code here, inside the surrounding <div> </div>
+      write your code here, inside the surrounding divs
     </div>
   );
 };
