@@ -9,7 +9,7 @@ function ProductList({products}) {
             <ul>
                 {products.map((product) => (
                     <li key={product.id}>
-                        {product.name} - {product.price}
+                        {product.name} - ${product.price}
                     </li>
                 ))}
             </ul>

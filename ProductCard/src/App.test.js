@@ -5,7 +5,7 @@ import products from './testProductList'
 
 // Test for ProductList and ProductCard components
 describe('ProductList component', () => {
-  test('renders ProductList with ProductCard for each product', () => {
+  test('Rendered ProductList with ProductCard for each product Report', () => {
     // Render ProductList with sample products
     render(<ProductList products={products} />);
 
@@ -20,7 +20,7 @@ describe('ProductList component', () => {
     });
   });
 
-  test('renders 50 ProductCard components', () => {
+  test('Rendered 50 ProductCard components Report', () => {
     // Render the ProductList component with 50 products
     render(<ProductList products={products} />);
 
@@ -36,7 +36,7 @@ describe('ProductCard component', () => {
   const randomNum = Math.floor(Math.random()*50)+1
   const randomProduct = products.find(product => product.id === randomNum);
 
-  test('checks if a random product is rendered correctly', () => {
+  test('Report of a random product being rendered correctly', () => {
     render(<ProductCard product={randomProduct} />);
     
     // Check if the product name is displayed
@@ -44,7 +44,7 @@ describe('ProductCard component', () => {
     expect(productName).toBeInTheDocument();
   });
 
-  test('has + and - buttons on each ProductCard', () => {
+  test('Report has + and - buttons on each ProductCard', () => {
     render(<ProductCard product={randomProduct} />);
 
     const productCard = screen.getAllByTestId('product-card')[0];

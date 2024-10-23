@@ -8,19 +8,19 @@ import products from './productList';
 const d = new Date();
 let year = d.getFullYear();
 
-test('renders header', () => {
+test('Rendered Header Report', () => {
     render(<Header />);
     const headerElement = screen.getByText(/E-Commerce Site/i);
     expect(headerElement).toBeInTheDocument();
 });
 
-test('renders footer', () => {
+test('Rendered Footer Report', () => {
     render(<Footer />);
     const footerElement = screen.getByText(new RegExp(`© ${year} E-Commerce Site`, 'i'));
     expect(footerElement).toBeInTheDocument();
 });
 
-test('renders product list', () => {
+test('Rendered Product list Report', () => {
     // Render the ProductList component with mock products
     render(<ProductList products={products} />);
 
@@ -32,12 +32,12 @@ test('renders product list', () => {
     expect(productItems).toHaveLength(products.length);
 
     // Check that each product name is rendered correctly
-    // products.forEach((product) => {
-    //     expect(screen.getByText(product.name)).toBeInTheDocument();
-    // });
+    products.forEach((product) => {
+        expect(screen.getByText(new RegExp(product.name, 'i'))).toBeInTheDocument();
+    });
 
     // // Check that each product price is rendered correctly
-    // products.forEach((product) => {
-    //     expect(screen.getByText(product.price)).toBeInTheDocument();
-    // });
+    products.forEach((product) => {
+        expect(screen.getByText(new RegExp(product.price, 'i'))).toBeInTheDocument();
+    });
 });
