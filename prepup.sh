@@ -10,9 +10,9 @@ fi
 folder1=$1
 folder2=$2
 
-# Copy folders and rename them
-cp -r "$folder1" .evaluationScripts
-cp -r "$folder2" labDirectory
+# Copy folders and rename them (don't copy node_modules)
+rsync -a --exclude="node_modules" "$folder1/" ".evaluationScripts/"
+rsync -a --exclude="node_modules" "$folder2/" "labDirectory/"
 
 # Archive the folders
 tar -czvf instructor.tgz .evaluationScripts
