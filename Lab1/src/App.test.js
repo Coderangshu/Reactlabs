@@ -8,19 +8,19 @@ import products from './productList';
 const d = new Date();
 let year = d.getFullYear();
 
-test('Rendered Header Report', () => {
+test('Header rendering as expected: ', () => {
     render(<Header />);
     const headerElement = screen.getByText(/E-Commerce Site/i);
     expect(headerElement).toBeInTheDocument();
 });
 
-test('Rendered Footer Report', () => {
+test('Footer rendering as expected: ', () => {
     render(<Footer />);
     const footerElement = screen.getByText(new RegExp(`© ${year} E-Commerce Site`, 'i'));
     expect(footerElement).toBeInTheDocument();
 });
 
-test('Rendered Product list Report', () => {
+test('Product list rendering as expected: ', () => {
     // Render the ProductList component with mock products
     render(<ProductList products={products} />);
 
