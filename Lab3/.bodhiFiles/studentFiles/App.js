@@ -10,7 +10,7 @@ function App() {
   // Write the logic for maintaining and updating cart value
 
   // end logic code here
-  // don't change any code in the below lines except the ProductCard component code
+  // don't change any code in the below lines except the ProductCard and CartIcon component code
   return (
     <div className="App">
       <Header />
@@ -23,7 +23,7 @@ function App() {
             ))}
           </div>
         </main>
-        <CartIcon itemCount={-1} />
+        <CartIcon/>
       <Footer />
     </div>
   );

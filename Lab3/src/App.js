@@ -24,7 +24,7 @@ function App() {
             ))}
           </div>
         </main>
-        <CartIcon itemCount={cartCount} />
+        <CartIcon/>
       <Footer />
     </div>
   );
