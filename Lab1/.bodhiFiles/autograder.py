@@ -17,9 +17,9 @@ template = {
     "message": "Autograder Failed!"
     }
 
-path = '/home/.evaluationScripts/.bodhiFiles/'
+path = '/home/.evaluationScripts/'
 
-inputFile = path+'out.txt'
+inputFile = path+'.bodhiFiles/out.txt'
 jsonPath = path+'evaluate.json'
 
 if os.path.isfile(inputFile):
