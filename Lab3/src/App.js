@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -7,10 +7,11 @@ import ProductCard from './components/ProductCard';
 import products from './productList'
 
 function App() {
-  // Write the logic for maintaining and updating cart value
+  const [cartCount, setCartCount] = useState(0);
 
-  // end logic code here
-  // don't change any code in the below lines except the ProductCard component code
+  const incrementCart = () => setCartCount(cartCount+1);
+  const decrementCart = () => setCartCount(cartCount>0?cartCount-1:0);
+
   return (
     <div className="App">
       <Header />
@@ -18,12 +19,12 @@ function App() {
           <div className="product-container">
             {products.map((product) => (
               <div key={product.id}>
-                  <ProductCard product={product} />
+                  <ProductCard product={product} incrementCart={incrementCart} decrementCart={decrementCart} />
               </div>
             ))}
           </div>
         </main>
-        <CartIcon itemCount={-1} />
+        <CartIcon itemCount={cartCount} />
       <Footer />
     </div>
   );

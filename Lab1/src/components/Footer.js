@@ -8,7 +8,9 @@ function Footer() {
         // write your code inside the <div> </div>
         // Should contain the text © <CURRENT-YEAR> E-Commerce Site
         <div data-testid="footer">
-            write your code
+            <footer>
+                <p>&copy; {onlyYear} E-Commerce Site</p>
+            </footer>
         </div>
     );
 }
