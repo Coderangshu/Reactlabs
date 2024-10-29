@@ -25,9 +25,11 @@ test('Cart value decrements when - button is clicked: ', () => {
   const decrementButton = within(productCards[0]).getByText('-');
   const valueElement = screen.getByTestId('cart-icon');
   const initialValue = parseInt(valueElement.textContent, 10);
-  fireEvent.click(incrementButton);
+  for (let i=0;i<10;i++) {
+    fireEvent.click(incrementButton);
+  }
   fireEvent.click(decrementButton);
-  expect(valueElement).toHaveTextContent(initialValue.toString());
+  expect(valueElement).toHaveTextContent((initialValue+10-1).toString());
 });
 
 test('Rendered cart count does not go below 0: ', () => {

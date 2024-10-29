@@ -31,8 +31,9 @@ if os.path.isfile(inputFile):
         if re.search(r'✕|✓', line):
             reqLines.append(line.strip())
 
-    for result in reqLines:
+    for i,result in enumerate(reqLines):
         entry = copy.deepcopy(template)
+        entry["testid"] = i
         if '✓' in result:
             entry["message"] = f"{result.split('(')[0][1:].strip()}: PASS"
             entry["score"] = 1
