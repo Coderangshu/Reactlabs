@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env CI=true react-scripts test > .bodhiFiles/out.txt 2>&1",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
