@@ -11,6 +11,7 @@ function App() {
 
   // end logic code here
   // don't change any code in the below lines except the ProductCard and CartIcon component code
+  // CartIcon has a prop named itemCount, how can you modify it according to your usecase?
   return (
     <div className="App">
       <Header />
