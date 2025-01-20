@@ -11,7 +11,7 @@ RUN mkdir /home/.evaluationScripts
 EXPOSE 30000
 
 # Step 5: Add necessary binaries
-RUN apk update && apk add bash && apk add python3
+RUN apk update && apk add bash && apk add python3~3.12
 
 # Step 5: Start the React app
 CMD [ "/bin/bash", "-c", "bash /home/.evaluationScripts/.bodhiFiles/init.sh; while :; do sleep 10; done" ]
