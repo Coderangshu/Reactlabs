@@ -1,18 +1,19 @@
 #!/bin/bash
 
 # Check if exactly two arguments are provided
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <folder1> <folder2>"
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <Lab Name>"
     exit 1
 fi
 
 # Assign arguments to variables
-folder1=$1
-folder2=$2
+lab=$1
+
+studentFile="$lab/.bodhiFiles/studentFiles"
 
 # Copy folders and rename them (don't copy node_modules)
-rsync -a --exclude="node_modules" "$folder1/" ".evaluationScripts/"
-rsync -a --exclude="node_modules" "$folder2/" "labDirectory/"
+rsync -a --exclude="node_modules" "$lab/" ".evaluationScripts/"
+rsync -a --exclude="node_modules" "$studentFile" "labDirectory/"
 
 # Archive the folders
 tar -czvf instructor.tgz .evaluationScripts
