@@ -30,6 +30,8 @@ const cartSlice = createSlice({
 const persistConfig = {
   // Declare the key for localStorage (could be anything)
   // Use localStorage for persistence
+  key: 'cartCount', // The key for localStorage (could be anything)
+  storage, // Use localStorage for persistence
 };
 
 const persistedReducer = persistReducer(persistConfig, cartSlice.reducer);
