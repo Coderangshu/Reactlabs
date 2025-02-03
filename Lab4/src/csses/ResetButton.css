@@ -1,0 +1,35 @@
+/* ResetButton.css */
+.reset-button {
+  position: fixed;         /* Stays fixed in the viewport */
+  left: 20px;              /* 20px from the left */
+  bottom: 50px;            /* 20px from the bottom */
+  background-color: blue;  /* Blue background */
+  color: white;            /* White text */
+  padding: 12px 24px;      /* Bigger padding for better visibility */
+  border: none;            /* No border */
+  border-radius: 50px;     /* Capsule shape */
+  font-size: 16px;         /* Readable font size */
+  font-weight: bold;       /* Bold text */
+  cursor: pointer;         /* Pointer cursor on hover */
+  z-index: 999;            /* Ensure it stays on top */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  
+  /* Floating effect */
+  animation: float 3s ease-in-out infinite;
+}
+
+.reset-button:hover {
+  background-color: darkblue; /* Slightly darker blue on hover */
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px); /* Moves up slightly */
+  }
+}
+
