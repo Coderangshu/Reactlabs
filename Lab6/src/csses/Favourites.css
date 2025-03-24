@@ -1,0 +1,10 @@
+.favourites-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center vertically */
+  align-items: center;     /* center horizontally */
+  height: 82vh;           /* occupy full viewport height */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,39 @@
+/* Style the header container */
+header {
+  display: flex;
+  justify-content: space-between; /* pushes the h1 to the left and nav to the right */
+  align-items: center;            /* vertically centers the content */
+  padding: 15px 30px;             /* adjust padding as needed */
+  background-color: #282c34;
+}
+
+/* Style the site title */
+header h1 {
+  color: #ffffff;
+  font-size: 2em;   /* large text */
+  margin: 0;        /* remove default margin */
+}
+
+/* Style the navigation container */
+.nav {
+  display: flex;
+  gap: 20px;  /* adds a gap between each navigation link */
+}
+
+/* Style the navigation links */
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Optional hover and active state */
+.nav-link:hover,
+.nav-link.active {
+  background-color: #ffcc00;
+  color: #1e1e1e;
+  border-radius: 4px;
+}
+

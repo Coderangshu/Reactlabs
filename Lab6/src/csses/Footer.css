@@ -1,0 +1,8 @@
+footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  flex-shrink: 0; /* Prevent shrinking */
+}
