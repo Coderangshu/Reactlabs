@@ -1,10 +1,7 @@
 #!/bin/bash
 
-cp /home/labDirectory/CartIcon.js /home/.evaluationScripts/src/components/
-cp /home/labDirectory/ProductCard.js /home/.evaluationScripts/src/components/
-cp /home/labDirectory/Reset.js /home/.evaluationScripts/src/components/
-cp /home/labDirectory/index.js /home/.evaluationScripts/src/
-cp /home/labDirectory/store.js /home/.evaluationScripts/src/
+cp /home/labDirectory/Header.js /home/.evaluationScripts/src/components/
+cp /home/labDirectory/App.js /home/.evaluationScripts/src/
 
 cd /home/.evaluationScripts
 
